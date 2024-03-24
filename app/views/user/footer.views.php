@@ -23,7 +23,7 @@
           <i class="fab fa-twitter"></i>
         </a>
         <a href="" class="text-white me-4">
-          <i class="fab fa-google"></i>
+          <i class="fab fa-google"></i>                                       
         </a>
         <a href="" class="text-white me-4">
           <i class="fab fa-instagram"></i>
