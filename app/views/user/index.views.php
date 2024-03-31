@@ -24,7 +24,8 @@
                     echo '
                     <li class="col-1">
                         <a class="d-grid text-decoration-none justify-content-center text-white" href="index.php?type=dethi&monhoc=' . $key['id_monhoc'] . '&trang=1">
-                            <div class=" rounded-3  bg-light "><img src="' . $key['anhMonHoc'] . '" alt="" width="100" height="100"></div><span class="d-flex justify-content-center">Đề ' . $key['tenMon'] . '</span>
+                            <div class=" rounded-3  bg-light "><img src="' . $key['anhMonHoc'] . '" alt="" width="100" height="100"></div>
+                            <span class="d-flex justify-content-center">Đề ' . $key['tenMon'] . '</span>
                         </a>
                     </li>
                     ';
