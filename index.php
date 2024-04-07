@@ -28,6 +28,9 @@ if(isset($_SESSION['user']) && is_array($_SESSION['user'])){
                 case 'changepass':
                     include_once("app/controllers/user/changepassControllers.php");
                     break;
+                case 'dethi' :
+                    include_once("app/controllers/user/dethiControllers.php");
+                    break; 
                 default:
                     include_once("app/controllers/user/indexControllers.php");
                     break;
@@ -52,6 +55,9 @@ if(isset($_SESSION['user']) && is_array($_SESSION['user'])){
                 break;
             case 'regis':
                 include_once("app/controllers/user/regisControllers.php");
+                break; 
+            case 'dethi' :
+                include_once("app/controllers/user/dethiControllers.php");
                 break; 
             default:
                 include_once("app/controllers/user/indexControllers.php");
