@@ -4,10 +4,7 @@
   <!-- Footer -->
   <footer class=" text-center text-lg-start text-white " style="background-color: #155E94">
     <!-- Section: Social media -->
-    <section
-             class="d-flex justify-content-between p-4"
-             style="background-color: black"
-             >
+    <section class="d-flex justify-content-between p-4" style="background-color: black">
       <!-- Left -->
       <div class="me-5">
         <span>Liên hệ với chúng tôi:</span>

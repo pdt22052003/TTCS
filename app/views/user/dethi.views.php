@@ -1,4 +1,6 @@
 <div class="d-flex align-items-center" style="background-color: whitesmoke;padding-bottom:150px; flex-direction:column;" id="container3">
+
+    <!-- phần tiêu đề -->
     <nav class="navbar navbar-light  w-75 rounded-3 mt-5" style="background-color: white;">
         <div class="container-fluid">
             <a class="navbar-brand " href="#">Đề thi</a>
@@ -10,6 +12,7 @@
             <div class="card rounded-4" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">BỘ LỌC</h5>
+                    <!-- search -->
                     <form action="index.php?type=dethi&trang=1" method="POST">
                         <div class="input-group ">
                             <input type="text" class="form-control " placeholder="Search" aria-label="Search"
@@ -20,7 +23,7 @@
                     </form>
                 </div>
                 <form action="index.php?type=dethi&trang=1" method="POST">
-
+                    
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Môn học
                             <?php
@@ -77,7 +80,7 @@
                             <nav class="navbar navbar-light  rounded-3" style="background-color: white;">
                                 <div class="container-fluid">
                                     <a class="navbar-brand " href="#">' . $j . '.' . $key['tenDeThi'] . '</a>
-                                    <a href="#">Xem</a>
+                                    <a href="index.php?type=cate&id='.$key['id_dethi'].'">Xem</a>
                                 </div>
                             </nav>
                         </br>

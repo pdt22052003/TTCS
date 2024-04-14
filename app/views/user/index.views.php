@@ -20,8 +20,8 @@
     <div class="mt-5" id="subject">
         <ul class="d-flex justify-content-center" style="list-style-type:none;">
             <?php
-                foreach ($getAllMonHoc as $key) {
-                    echo '
+            foreach ($getAllMonHoc as $key) {
+                echo '
                     <li class="col-1">
                         <a class="d-grid text-decoration-none justify-content-center text-white" href="index.php?type=dethi&monhoc=' . $key['id_monhoc'] . '&trang=1">
                             <div class=" rounded-3  bg-light "><img src="' . $key['anhMonHoc'] . '" alt="" width="100" height="100"></div>
@@ -29,13 +29,12 @@
                         </a>
                     </li>
                     ';
-                }
+            }
             ?>
         </ul>
     </div>
 </div>
 
 <div class="bg-light d-flex align-items-center" style="flex-direction:column;padding-bottom:150px; min-height: 500px;">
-    <div class="d-flex justify-content-center mt-5" id="dethi-title">
-    </div>
+    <div class="d-flex justify-content-center mt-5" id="dethi-title"></div>
 </div>
