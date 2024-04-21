@@ -34,6 +34,9 @@ if(isset($_SESSION['user']) && is_array($_SESSION['user'])){
                 case 'cate':
                     include_once('app/controllers/user/cateControllers.php');
                     break;
+                case 'detail':
+                    include_once("app/controllers/user/detailControllers.php");
+                    break;
                 default:
                     include_once("app/controllers/user/indexControllers.php");
                     break;

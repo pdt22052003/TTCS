@@ -60,3 +60,15 @@ function getDeThiById($id){
     $sql="SELECT * FROM dethi WHERE xoa_dethi = 0 AND id_dethi = $id";
     return pdo_query_one($sql);
 }
+function getSoCauDeThiById($id){
+    $sql="SELECT COUNT(maDeThi) AS 'soCau' FROM cauhoi WHERE xoa_cauhoi = 0 AND maDeThi = $id";
+    return pdo_query_one($sql);
+}
+function getCauHoiByDeThi($maDeThi){
+    $sql="SELECT * FROM cauhoi INNER JOIN dapan ON cauhoi.maDapAn=dapan.id_dapan WHERE cauhoi.xoa_cauhoi=0 AND dapan.xoa_dapan=0 AND maDeThi = $maDeThi ORDER BY cauhoi.cauSo ASC  ";
+    return pdo_query($sql);
+}
+function getTop5DeMon($maMonHoc){
+    $sql="SELECT * FROM dethi WHERE xoa_dethi = 0 AND maMonHoc = $maMonHoc ORDER BY ngayTaiDe DESC LIMIT 5  ";
+    return pdo_query($sql);
+}

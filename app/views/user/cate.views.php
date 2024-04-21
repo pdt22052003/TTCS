@@ -18,17 +18,38 @@
                 </div>
             </nav>
         </div>
-        <!-- Xong phần tiêu đề -->
 
-        <!-- phần thông tin đề thi -->
+        <!-- phần thông tin đề thi và lịch sử làm bài -->
         <div class="row mt-5 d-flex justify-content-between">
             <div class="col-7 d-flex    " style="flex-direction:column;row-gap:10px">
                 <div class="row p-1 rounded-3" style="background-color: white;">
                     <h4 style="color: #155E94"><?php echo $getDeThiById['tenDeThi']; ?></h4>
-                    <h5>Tổng số câu: 10</h5>
+                    <h5>Tổng số câu: <?php echo $getSoCauDeThiById['soCau']; ?></h5>
                     <h6>Thời gian làm bài: <?php echo $getDeThiById['thoiGianLamBai'] / 60; ?> phút </h6>
+                    <?php
+                        if($getDeThiById['code']!=null){
+
+                        }else{
+                            echo '<div class="d-flex "  style="justify-content:right">';
+                            echo '
+                                    <a href="index.php?type=detail&id=' . $getDeThiById['id_dethi'] . '" class="btn btn-success w-25">
+                                        Vào phòng thi
+                                    </a>';
+
+                        }
+                    ?>
                 </div>
             </div>
+            <div class="row rounded-3" style="background-color: white;">
+                <h5 style="color: #155E94">Lịch sử làm bài</h5>
+            </div>
         </div>
+        <!-- Phần bảng xếp hạng -->
+        <div class="col-4 rounded-3" style="background-color: white;">
+            <h5 style="color: #155E94">Bảng xếp hạng top 10</h5>
+        </div>
+
+
     </div>
+                            </div>
 </div>

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-...thông tin mã hash..." crossorigin="anonymous" />
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <div id="container6">
   <!-- Footer -->
   <footer class=" text-center text-lg-start text-white " style="background-color: #155E94">
@@ -64,19 +64,19 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-              <a href="#!" class="text-white">Mapstudy.edu.vn</a>
+              <a href="#!" class="text-white" style="text-decoration: none;">Mapstudy.edu.vn</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Hà Nội</a>
+              <a href="#!" class="text-white" style="text-decoration: none;">Hà Nội</a>
             </p>
             <p>
-              <a href="#!" class="text-white">Chịu trách nhiệm nội dung: Phạm Đình Tiến</a>
+              <a href="#!" class="text-white" style="text-decoration: none;">Chịu trách nhiệm nội dung: Phạm Đình Tiến</a>
             </p>
             <p>
-              <a href="#!" class="text-white">tienpham2003@gmail.com</a>
+              <a href="#!" class="text-white" style="text-decoration: none;">tienpham2003@gmail.com</a>
             </p>
             <p>
-              <a href="#!" class="text-white">090910JQKA</a>
+              <a href="#!" class="text-white" style="text-decoration: none;">090910JQKA</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -89,18 +89,10 @@
                 class="mb-4 mt-0 d-inline-block mx-auto"
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
-            <p>
-              <a href="#!" class="text-white">Giới thiệu</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Câu hỏi thường gặp</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Điều Khoản Dịch Vụ</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Chính Sách Bảo Mật</a>
-            </p>
+            <p><a href="#!" class="text-white" style="text-decoration: none;">Giới thiệu</a></p>
+            <p><a href="#!" class="text-white" style="text-decoration: none;">Câu hỏi thường gặp</a></p>
+            <p><a href="#!" class="text-white" style="text-decoration: none;">Điều Khoản Dịch Vụ</a></p>
+            <p><a href="#!" class="text-white" style="text-decoration: none;">Chính Sách Bảo Mật</a></p>
           </div>
           <!-- Grid column -->
 

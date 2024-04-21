@@ -36,5 +36,25 @@
 </div>
 
 <div class="bg-light d-flex align-items-center" style="flex-direction:column;padding-bottom:150px; min-height: 500px;">
-    <div class="d-flex justify-content-center mt-5" id="dethi-title"></div>
+    <?php
+    foreach ($getAllMonHoc as $key) {
+        echo '<div class="list-group mt-5 " style="width:90%">
+            <label class="" style="color: #155E94" for="">
+                <h3>Đề thi Hot ' . $key['tenMon'] . '</h3>
+            </label>';
+        $getTop5DeMon = getTop5DeMon($key['id_monhoc']);
+        $i = 1;
+        foreach ($getTop5DeMon as $key1) {
+            if ($i == 0) {
+                echo '<a href="index.php?type=cate&id=' . $key1['id_dethi'] . '" class="list-group-item list-group-item-action active" style="background-color: #155E94" aria-current="true">
+                    ' . $i . '.' . $key1['tenDeThi'] . '
+                </a>';
+            } else {
+                echo '<a href="index.php?type=cate&id=' . $key1['id_dethi'] . '" class="list-group-item list-group-item-action">' . $i . '.' . $key1['tenDeThi'] . '</a>';
+            }
+            $i++;
+        }
+        echo '</div>';
+    }
+    ?>
 </div>
