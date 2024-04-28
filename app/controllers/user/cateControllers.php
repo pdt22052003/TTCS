@@ -22,6 +22,7 @@ if(isset($_GET['id'])){
     $getCauHoiByDeThi=getCauHoiByDeThi($_GET['id']);
     $getDiemThiUserByDeThi=getDiemThiUserByDeThi($_GET['id'],$_SESSION['user']['id_nguoidung']);
     $getBXH=getBXH($_GET['id']); 
+    $getAllBXH=getAllBXH($_GET['id']);
     
 }
 $getUserById=getUserById($_SESSION['user']['id_nguoidung']);

@@ -160,6 +160,27 @@
                             </tr>
                         ';
                     }
+                    $j = 1;
+                    foreach ($getAllBXH as $key) {
+                        $seconds = $key['thoiGianLam'];
+                        $minutes = floor($seconds / 60);
+                        $remainingSeconds = $seconds % 60;
+                        if ($key['id_nguoidung'] == $_SESSION['user']['id_nguoidung'] && $j > 10) {
+                            echo '
+                                <tr>
+                                <td colspan="4">...</td>
+                                </tr>';
+                            echo '
+                            <tr style="background-color:white">
+                            <th scope="row">' . $j . '</th>
+                            <td>' . $key['tenTaiKhoan'] . '-(Bạn)</td>
+                            <td>' . $minutes . ' phút ' . $remainingSeconds . ' giây</td>
+                            <td>' . $key['soDiem'] . ' điểm</td>
+                            </tr>
+                            ';
+                        }
+                        $j++;
+                    }
                     echo '
                         </tbody>
                         </table>
