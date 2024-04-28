@@ -30,3 +30,28 @@ function updatePass($matKhauCu, $matkhaumoi,$id_nguoidung){
     $sql="UPDATE nguoidung SET  matKhau='$matkhaumoi' WHERE id_nguoidung=$id_nguoidung";
     return pdo_execute($sql);
 }
+function getDiemThiUserByDeThi($id,$id_nguoidung){
+    $sql="SELECT * FROM diemthi INNER JOIN nguoidung ON diemthi.maNguoiDung=nguoidung.id_nguoidung WHERE xoa_diemthi=0 AND maDeThi1=$id AND nguoidung.id_nguoidung=$id_nguoidung  ORDER BY id_diemthi ASC";
+    return pdo_query($sql);
+}
+function getBXH($id){
+    $sql="SELECT diemthi.thoiGianLam, nguoidung.tenTaiKhoan,diemthi.soDiem, min(diemthi.id_diemthi)
+    FROM diemthi
+    INNER JOIN nguoidung ON diemthi.maNguoiDung = nguoidung.id_nguoidung
+    INNER JOIN (
+        SELECT maNguoiDung, min(id_diemthi) as MaxDiem
+        FROM diemthi
+        WHERE xoa_diemthi = 0 AND maDeThi1 = $id
+        GROUP BY maNguoiDung
+    ) AS min_diem ON diemthi.maNguoiDung = min_diem.maNguoiDung AND diemthi.id_diemthi = min_diem.MaxDiem
+    WHERE diemthi.xoa_diemthi = 0 AND diemthi.maDeThi1 = $id
+    GROUP BY diemthi.maNguoiDung
+    ORDER BY diemthi.soDiem DESC
+    LIMIT 10;
+    ";
+    return pdo_query($sql);
+}
+function addDiemThi($maNguoiDung, $maDeThi1, $soDiem, $thoiGianLam){
+    $sql="INSERT INTO diemthi(maNguoiDung, maDeThi1, soDiem, thoiGianLam) VALUES ($maNguoiDung, $maDeThi1, $soDiem, $thoiGianLam)";
+    return pdo_execute($sql);
+}

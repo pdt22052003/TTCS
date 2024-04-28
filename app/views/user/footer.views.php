@@ -122,9 +122,7 @@
          style="background-color: rgba(0, 0, 0, 0.2)"
          >
       © 2024 Copyright:
-      <a class="text-white" href="https://Mapstudy.com/"
-         >Mapstudy.com</a
-        >
+      <a class="text-white" href="https://Mapstudy.com/">Mapstudy.com</a>
     </div>
     <!-- Copyright -->
   </footer>

@@ -1,5 +1,11 @@
 <?php
-
+if(isset($_GET['del'])){
+    array_splice($_SESSION['cart'], $_GET['del'], 1);
+    $_SESSION['cart'] = array_values($_SESSION['cart']);
+}
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+}
 if(isset($_POST['btn-search'])){
     $search = $_POST['search'];
     $title = "Những đề thi liên quan đến $search";
